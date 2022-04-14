@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.WorkingButton = new System.Windows.Forms.Button();
             this.SkipStageButton = new System.Windows.Forms.Button();
             this.setWorkLabel = new System.Windows.Forms.Label();
             this.setBreakLabel = new System.Windows.Forms.Label();
             this.setLongBreakLabel = new System.Windows.Forms.Label();
             this.settingsLabel = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pomodoroProgressBar = new System.Windows.Forms.ProgressBar();
             this.setLongBreakInput = new System.Windows.Forms.TextBox();
             this.setBreakInput = new System.Windows.Forms.TextBox();
             this.setWorkInput = new System.Windows.Forms.TextBox();
+            this.pomodoroTimer = new System.Windows.Forms.Timer(this.components);
+            this.timerTextLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // WorkingButton
@@ -103,12 +106,12 @@
             this.settingsLabel.TabIndex = 5;
             this.settingsLabel.Text = "SETTINGS (in minutes)";
             // 
-            // progressBar1
+            // pomodoroProgressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(0, 297);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(679, 23);
-            this.progressBar1.TabIndex = 6;
+            this.pomodoroProgressBar.Location = new System.Drawing.Point(0, 297);
+            this.pomodoroProgressBar.Name = "pomodoroProgressBar";
+            this.pomodoroProgressBar.Size = new System.Drawing.Size(679, 23);
+            this.pomodoroProgressBar.TabIndex = 6;
             // 
             // setLongBreakInput
             // 
@@ -131,15 +134,31 @@
             this.setWorkInput.Size = new System.Drawing.Size(83, 20);
             this.setWorkInput.TabIndex = 9;
             // 
+            // pomodoroTimer
+            // 
+            this.pomodoroTimer.Interval = 1000;
+            this.pomodoroTimer.Tick += new System.EventHandler(this.pomodoroTimer_Tick);
+            // 
+            // timerTextLabel
+            // 
+            this.timerTextLabel.AutoSize = true;
+            this.timerTextLabel.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timerTextLabel.Location = new System.Drawing.Point(12, 263);
+            this.timerTextLabel.Name = "timerTextLabel";
+            this.timerTextLabel.Size = new System.Drawing.Size(252, 21);
+            this.timerTextLabel.TabIndex = 10;
+            this.timerTextLabel.Text = "00:00 | POMODORO SLEEP";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 320);
+            this.Controls.Add(this.timerTextLabel);
             this.Controls.Add(this.setWorkInput);
             this.Controls.Add(this.setBreakInput);
             this.Controls.Add(this.setLongBreakInput);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.pomodoroProgressBar);
             this.Controls.Add(this.settingsLabel);
             this.Controls.Add(this.setLongBreakLabel);
             this.Controls.Add(this.setBreakLabel);
@@ -161,10 +180,12 @@
         private System.Windows.Forms.Label setBreakLabel;
         private System.Windows.Forms.Label setLongBreakLabel;
         private System.Windows.Forms.Label settingsLabel;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar pomodoroProgressBar;
         private System.Windows.Forms.TextBox setLongBreakInput;
         private System.Windows.Forms.TextBox setBreakInput;
         private System.Windows.Forms.TextBox setWorkInput;
+        private System.Windows.Forms.Timer pomodoroTimer;
+        private System.Windows.Forms.Label timerTextLabel;
     }
 }
 

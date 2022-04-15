@@ -50,7 +50,13 @@ namespace Personal_Helper_WF
 
             if (timerSeconds <= 0)
             {
-                if (pomodoroStatus == "WORK TIME")
+                GoToNextTimerStage();
+            }
+        }
+
+        private void GoToNextTimerStage()
+        {
+            if (pomodoroStatus == "WORK TIME")
                 {
                     ++workingSessions;
 
@@ -69,7 +75,6 @@ namespace Personal_Helper_WF
                 }
 
                 SetEnteredPomodoroSettings();
-            }
         }
 
         private void pomodoroTimer_Tick(object sender, EventArgs e)
@@ -106,6 +111,11 @@ namespace Personal_Helper_WF
                 MessageBox.Show($"Enter correct time in minutes \n \n {ex}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void SkipStageButton_Click(object sender, EventArgs e)
+        {
+            GoToNextTimerStage();
         }
 
         private void StartPomodoroWithCurrentSettings()

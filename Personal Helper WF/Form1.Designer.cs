@@ -34,7 +34,6 @@
             this.setWorkLabel = new System.Windows.Forms.Label();
             this.setBreakLabel = new System.Windows.Forms.Label();
             this.setLongBreakLabel = new System.Windows.Forms.Label();
-            this.settingsLabel = new System.Windows.Forms.Label();
             this.pomodoroProgressBar = new System.Windows.Forms.ProgressBar();
             this.setLongBreakInput = new System.Windows.Forms.TextBox();
             this.setBreakInput = new System.Windows.Forms.TextBox();
@@ -47,11 +46,11 @@
             // 
             this.WorkingButton.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WorkingButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.WorkingButton.Location = new System.Drawing.Point(477, 223);
+            this.WorkingButton.Location = new System.Drawing.Point(377, 228);
             this.WorkingButton.Name = "WorkingButton";
-            this.WorkingButton.Size = new System.Drawing.Size(190, 33);
+            this.WorkingButton.Size = new System.Drawing.Size(177, 32);
             this.WorkingButton.TabIndex = 0;
-            this.WorkingButton.Text = "START WORKING";
+            this.WorkingButton.Text = "START";
             this.WorkingButton.UseVisualStyleBackColor = true;
             this.WorkingButton.Click += new System.EventHandler(this.WorkingButton_Click);
             // 
@@ -59,80 +58,74 @@
             // 
             this.SkipStageButton.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SkipStageButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SkipStageButton.Location = new System.Drawing.Point(477, 258);
+            this.SkipStageButton.Location = new System.Drawing.Point(377, 258);
             this.SkipStageButton.Name = "SkipStageButton";
-            this.SkipStageButton.Size = new System.Drawing.Size(190, 33);
+            this.SkipStageButton.Size = new System.Drawing.Size(177, 33);
             this.SkipStageButton.TabIndex = 1;
             this.SkipStageButton.Text = "SKIP STAGE";
             this.SkipStageButton.UseVisualStyleBackColor = true;
+            this.SkipStageButton.Click += new System.EventHandler(this.SkipStageButton_Click);
             // 
             // setWorkLabel
             // 
             this.setWorkLabel.AutoSize = true;
             this.setWorkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setWorkLabel.Location = new System.Drawing.Point(476, 160);
+            this.setWorkLabel.Location = new System.Drawing.Point(373, 179);
             this.setWorkLabel.Name = "setWorkLabel";
-            this.setWorkLabel.Size = new System.Drawing.Size(106, 20);
+            this.setWorkLabel.Size = new System.Drawing.Size(42, 20);
             this.setWorkLabel.TabIndex = 2;
-            this.setWorkLabel.Text = "work ------------";
+            this.setWorkLabel.Text = "work";
             // 
             // setBreakLabel
             // 
             this.setBreakLabel.AutoSize = true;
             this.setBreakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setBreakLabel.Location = new System.Drawing.Point(476, 180);
+            this.setBreakLabel.Location = new System.Drawing.Point(434, 179);
             this.setBreakLabel.Name = "setBreakLabel";
-            this.setBreakLabel.Size = new System.Drawing.Size(103, 20);
+            this.setBreakLabel.Size = new System.Drawing.Size(49, 20);
             this.setBreakLabel.TabIndex = 3;
-            this.setBreakLabel.Text = "break ----------";
+            this.setBreakLabel.Text = "break";
             // 
             // setLongBreakLabel
             // 
             this.setLongBreakLabel.AutoSize = true;
             this.setLongBreakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setLongBreakLabel.Location = new System.Drawing.Point(476, 198);
+            this.setLongBreakLabel.Location = new System.Drawing.Point(495, 179);
             this.setLongBreakLabel.Name = "setLongBreakLabel";
-            this.setLongBreakLabel.Size = new System.Drawing.Size(102, 20);
+            this.setLongBreakLabel.Size = new System.Drawing.Size(57, 20);
             this.setLongBreakLabel.TabIndex = 4;
-            this.setLongBreakLabel.Text = "long break ---";
-            // 
-            // settingsLabel
-            // 
-            this.settingsLabel.AutoSize = true;
-            this.settingsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsLabel.Location = new System.Drawing.Point(483, 130);
-            this.settingsLabel.Name = "settingsLabel";
-            this.settingsLabel.Size = new System.Drawing.Size(175, 20);
-            this.settingsLabel.TabIndex = 5;
-            this.settingsLabel.Text = "SETTINGS (in minutes)";
+            this.setLongBreakLabel.Text = "l-break";
             // 
             // pomodoroProgressBar
             // 
             this.pomodoroProgressBar.Location = new System.Drawing.Point(0, 297);
             this.pomodoroProgressBar.Name = "pomodoroProgressBar";
-            this.pomodoroProgressBar.Size = new System.Drawing.Size(679, 23);
+            this.pomodoroProgressBar.Size = new System.Drawing.Size(566, 23);
             this.pomodoroProgressBar.TabIndex = 6;
             // 
             // setLongBreakInput
             // 
-            this.setLongBreakInput.Location = new System.Drawing.Point(584, 200);
+            this.setLongBreakInput.Location = new System.Drawing.Point(499, 202);
             this.setLongBreakInput.Name = "setLongBreakInput";
-            this.setLongBreakInput.Size = new System.Drawing.Size(83, 20);
+            this.setLongBreakInput.Size = new System.Drawing.Size(55, 20);
             this.setLongBreakInput.TabIndex = 7;
+            this.setLongBreakInput.Text = "20";
             // 
             // setBreakInput
             // 
-            this.setBreakInput.Location = new System.Drawing.Point(584, 180);
+            this.setBreakInput.Location = new System.Drawing.Point(438, 202);
             this.setBreakInput.Name = "setBreakInput";
-            this.setBreakInput.Size = new System.Drawing.Size(83, 20);
+            this.setBreakInput.Size = new System.Drawing.Size(55, 20);
             this.setBreakInput.TabIndex = 8;
+            this.setBreakInput.Text = "5";
             // 
             // setWorkInput
             // 
-            this.setWorkInput.Location = new System.Drawing.Point(584, 160);
+            this.setWorkInput.Location = new System.Drawing.Point(377, 202);
             this.setWorkInput.Name = "setWorkInput";
-            this.setWorkInput.Size = new System.Drawing.Size(83, 20);
+            this.setWorkInput.Size = new System.Drawing.Size(55, 20);
             this.setWorkInput.TabIndex = 9;
+            this.setWorkInput.Text = "25";
             // 
             // pomodoroTimer
             // 
@@ -153,13 +146,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 320);
+            this.ClientSize = new System.Drawing.Size(566, 320);
             this.Controls.Add(this.timerTextLabel);
             this.Controls.Add(this.setWorkInput);
             this.Controls.Add(this.setBreakInput);
             this.Controls.Add(this.setLongBreakInput);
             this.Controls.Add(this.pomodoroProgressBar);
-            this.Controls.Add(this.settingsLabel);
             this.Controls.Add(this.setLongBreakLabel);
             this.Controls.Add(this.setBreakLabel);
             this.Controls.Add(this.setWorkLabel);
@@ -179,7 +171,6 @@
         private System.Windows.Forms.Label setWorkLabel;
         private System.Windows.Forms.Label setBreakLabel;
         private System.Windows.Forms.Label setLongBreakLabel;
-        private System.Windows.Forms.Label settingsLabel;
         private System.Windows.Forms.ProgressBar pomodoroProgressBar;
         private System.Windows.Forms.TextBox setLongBreakInput;
         private System.Windows.Forms.TextBox setBreakInput;

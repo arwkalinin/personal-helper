@@ -29,6 +29,8 @@ namespace Personal_Helper_WF
         {
             pomodoroTimer.Stop();
             pomodoroProgressBar.Value = 0;
+            pomodoroStatus = "POMODORO SLEEP";
+            workingSessions = 0;
             timerTextLabel.Text = $"00:00 | POMODORO STOPPED";
             isPomodoroRunning = false;
             SwitchPomodoroButton();

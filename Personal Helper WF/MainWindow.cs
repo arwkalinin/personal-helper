@@ -25,6 +25,14 @@ namespace Personal_Helper_WF
             InitializeComponent();
         }
 
+        private void StopPomodoro()
+        {
+            pomodoroTimer.Stop();
+            pomodoroProgressBar.Value = 0;
+            timerTextLabel.Text = $"00:00 | POMODORO STOPPED";
+            isPomodoroRunning = false;
+            SwitchPomodoroButton();
+        }
         private void SwitchPomodoroButton()
         {
             if (isPomodoroRunning)
@@ -127,15 +135,15 @@ namespace Personal_Helper_WF
         {
             if (isPomodoroRunning)
             {
-                pomodoroTimer.Stop();
-                isPomodoroRunning = false;
-                SwitchPomodoroButton();
+                StopPomodoro();
             }
             else
             {
                 try
                 {
+                    isPomodoroRunning = true;
                     StartPomodoroWithCurrentSettings();
+                    SwitchPomodoroButton();
                 }
                 catch (Exception ex)
                 {
@@ -179,9 +187,6 @@ namespace Personal_Helper_WF
                     currentTimerMax = workingTimeSeconds;
                     break;
             }
-
-            isPomodoroRunning = true;
-            SwitchPomodoroButton();
         }
 
     }

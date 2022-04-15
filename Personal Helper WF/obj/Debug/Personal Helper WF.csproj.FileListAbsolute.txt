@@ -8,4 +8,4 @@ W:\projects\.net framework proj\Personal Helper WF\Personal Helper WF\obj\Debug\
 W:\projects\.net framework proj\Personal Helper WF\Personal Helper WF\obj\Debug\Personal Helper WF.csproj.CoreCompileInputs.cache
 W:\projects\.net framework proj\Personal Helper WF\Personal Helper WF\obj\Debug\Personal Helper WF.exe
 W:\projects\.net framework proj\Personal Helper WF\Personal Helper WF\obj\Debug\Personal Helper WF.pdb
-W:\projects\.net framework proj\Personal Helper WF\Personal Helper WF\obj\Debug\Personal_Helper_WF.Form1.resources
+W:\projects\.net framework proj\Personal Helper WF\Personal Helper WF\obj\Debug\Personal_Helper_WF.MainWindow.resources

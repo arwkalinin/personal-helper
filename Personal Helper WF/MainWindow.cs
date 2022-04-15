@@ -10,21 +10,24 @@ using System.Windows.Forms;
 
 namespace Personal_Helper_WF
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
 
         string pomodoroStatus = "POMODORO SLEEP";
         double workingTimeMinutes, breakTimeMinutes, longBreakTimeMinutes;
         double workingTimeSeconds, breakTimeSeconds, longBreakTimeSeconds;
         int workingSessions = 0;
+        double currentTimerMax = 100;
+        double currentProgressPercent = 0;
 
-        public Form1()
+        public MainWindow()
         {
             InitializeComponent();
         }
 
         private void TimerProcess(double timerSeconds)
         {
+
             --timerSeconds;
             switch (pomodoroStatus)
             {
@@ -39,6 +42,8 @@ namespace Personal_Helper_WF
                     break;
             }
 
+            ProgressValueProcess(timerSeconds);
+
             timerTextLabel.Text = $"{Math.Floor(timerSeconds / 60)}:{timerSeconds % 60}";
             timerTextLabel.Text += $" | {pomodoroStatus}";
 
@@ -52,6 +57,12 @@ namespace Personal_Helper_WF
             {
                 GoToNextTimerStage();
             }
+        }
+
+        private void ProgressValueProcess(double timeLeft)
+        {
+            int currentPercent = (int) (timeLeft / (currentTimerMax / 100));
+            pomodoroProgressBar.Value = currentPercent;
         }
 
         private void GoToNextTimerStage()
@@ -132,6 +143,22 @@ namespace Personal_Helper_WF
             workingTimeSeconds = workingTimeMinutes * 60;
             breakTimeSeconds = breakTimeMinutes * 60;
             longBreakTimeSeconds = longBreakTimeMinutes * 60;
+
+            switch (pomodoroStatus)
+            {
+                case "WORK TIME":
+                    currentTimerMax = workingTimeSeconds;
+                    break;
+                case "BREAK TIME":
+                    currentTimerMax = breakTimeSeconds;
+                    break;
+                case "LONG BREAK TIME":
+                    currentTimerMax = longBreakTimeSeconds;
+                    break;
+                default:
+                    currentTimerMax = workingTimeSeconds;
+                    break;
+            }
         }
 
     }

@@ -1,6 +1,6 @@
 ﻿namespace Personal_Helper_WF
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.WorkingButton = new System.Windows.Forms.Button();
             this.SkipStageButton = new System.Windows.Forms.Button();
             this.setWorkLabel = new System.Windows.Forms.Label();
@@ -142,7 +143,7 @@
             this.timerTextLabel.TabIndex = 10;
             this.timerTextLabel.Text = "00:00 | POMODORO SLEEP";
             // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,8 +158,9 @@
             this.Controls.Add(this.setWorkLabel);
             this.Controls.Add(this.SkipStageButton);
             this.Controls.Add(this.WorkingButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainWindow";
+            this.Text = "Personal Helper";
             this.ResumeLayout(false);
             this.PerformLayout();
 

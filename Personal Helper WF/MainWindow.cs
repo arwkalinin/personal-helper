@@ -18,10 +18,23 @@ namespace Personal_Helper_WF
         double workingTimeSeconds, breakTimeSeconds, longBreakTimeSeconds;
         int workingSessions = 0;
         double currentTimerMax = 100;
+        bool isPomodoroRunning = false;
 
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void SwitchPomodoroButton()
+        {
+            if (isPomodoroRunning)
+            {
+                WorkingButton.Text = "STOP";
+            }
+            else
+            {
+                WorkingButton.Text = "START";
+            }
         }
 
         private void TimerProcess(double timerSeconds)
@@ -112,15 +125,23 @@ namespace Personal_Helper_WF
 
         private void WorkingButton_Click(object sender, EventArgs e)
         {
-            try
+            if (isPomodoroRunning)
             {
-                StartPomodoroWithCurrentSettings();
+                pomodoroTimer.Stop();
+                isPomodoroRunning = false;
+                SwitchPomodoroButton();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Enter correct time in minutes \n \n {ex}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    StartPomodoroWithCurrentSettings();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Enter correct time in minutes \n \n {ex}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-
         }
 
         private void SkipStageButton_Click(object sender, EventArgs e)
@@ -158,6 +179,9 @@ namespace Personal_Helper_WF
                     currentTimerMax = workingTimeSeconds;
                     break;
             }
+
+            isPomodoroRunning = true;
+            SwitchPomodoroButton();
         }
 
     }

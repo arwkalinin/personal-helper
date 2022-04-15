@@ -18,7 +18,6 @@ namespace Personal_Helper_WF
         double workingTimeSeconds, breakTimeSeconds, longBreakTimeSeconds;
         int workingSessions = 0;
         double currentTimerMax = 100;
-        double currentProgressPercent = 0;
 
         public MainWindow()
         {
@@ -62,7 +61,7 @@ namespace Personal_Helper_WF
         private void ProgressValueProcess(double timeLeft)
         {
             int currentPercent = (int) (timeLeft / (currentTimerMax / 100));
-            pomodoroProgressBar.Value = currentPercent;
+            pomodoroProgressBar.Value = 100 - currentPercent;
         }
 
         private void GoToNextTimerStage()

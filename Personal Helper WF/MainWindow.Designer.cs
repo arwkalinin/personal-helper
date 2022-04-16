@@ -41,6 +41,9 @@
             this.setWorkInput = new System.Windows.Forms.TextBox();
             this.pomodoroTimer = new System.Windows.Forms.Timer(this.components);
             this.timerTextLabel = new System.Windows.Forms.Label();
+            this.totalWorkTime = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.upperText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // WorkingButton
@@ -108,9 +111,10 @@
             // 
             this.setLongBreakInput.Location = new System.Drawing.Point(499, 202);
             this.setLongBreakInput.Name = "setLongBreakInput";
-            this.setLongBreakInput.Size = new System.Drawing.Size(55, 20);
+            this.setLongBreakInput.Size = new System.Drawing.Size(53, 20);
             this.setLongBreakInput.TabIndex = 7;
             this.setLongBreakInput.Text = "20";
+            this.setLongBreakInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // setBreakInput
             // 
@@ -119,14 +123,17 @@
             this.setBreakInput.Size = new System.Drawing.Size(55, 20);
             this.setBreakInput.TabIndex = 8;
             this.setBreakInput.Text = "5";
+            this.setBreakInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // setWorkInput
             // 
+            this.setWorkInput.BackColor = System.Drawing.SystemColors.Window;
             this.setWorkInput.Location = new System.Drawing.Point(377, 202);
             this.setWorkInput.Name = "setWorkInput";
             this.setWorkInput.Size = new System.Drawing.Size(55, 20);
             this.setWorkInput.TabIndex = 9;
             this.setWorkInput.Text = "25";
+            this.setWorkInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pomodoroTimer
             // 
@@ -136,19 +143,56 @@
             // timerTextLabel
             // 
             this.timerTextLabel.AutoSize = true;
+            this.timerTextLabel.BackColor = System.Drawing.Color.SkyBlue;
             this.timerTextLabel.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timerTextLabel.Location = new System.Drawing.Point(12, 263);
+            this.timerTextLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.timerTextLabel.Location = new System.Drawing.Point(12, 239);
             this.timerTextLabel.Name = "timerTextLabel";
             this.timerTextLabel.Size = new System.Drawing.Size(252, 21);
             this.timerTextLabel.TabIndex = 10;
             this.timerTextLabel.Text = "00:00 | POMODORO SLEEP";
             // 
+            // totalWorkTime
+            // 
+            this.totalWorkTime.AutoSize = true;
+            this.totalWorkTime.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalWorkTime.Location = new System.Drawing.Point(12, 263);
+            this.totalWorkTime.Name = "totalWorkTime";
+            this.totalWorkTime.Size = new System.Drawing.Size(263, 21);
+            this.totalWorkTime.TabIndex = 11;
+            this.totalWorkTime.Text = "00:00 | TOTAL WORK TIME";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("NSimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(16, 54);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(309, 168);
+            this.richTextBox1.TabIndex = 12;
+            this.richTextBox1.Text = "Done 1";
+            // 
+            // upperText
+            // 
+            this.upperText.AutoSize = true;
+            this.upperText.BackColor = System.Drawing.Color.SkyBlue;
+            this.upperText.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upperText.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.upperText.Location = new System.Drawing.Point(23, 30);
+            this.upperText.Name = "upperText";
+            this.upperText.Size = new System.Drawing.Size(109, 21);
+            this.upperText.TabIndex = 13;
+            this.upperText.Text = "DONE LIST";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(566, 320);
+            this.Controls.Add(this.upperText);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.totalWorkTime);
             this.Controls.Add(this.timerTextLabel);
             this.Controls.Add(this.setWorkInput);
             this.Controls.Add(this.setBreakInput);
@@ -159,6 +203,7 @@
             this.Controls.Add(this.setWorkLabel);
             this.Controls.Add(this.SkipStageButton);
             this.Controls.Add(this.WorkingButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.Text = "Personal Helper";
@@ -180,6 +225,9 @@
         private System.Windows.Forms.TextBox setWorkInput;
         private System.Windows.Forms.Timer pomodoroTimer;
         private System.Windows.Forms.Label timerTextLabel;
+        private System.Windows.Forms.Label totalWorkTime;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label upperText;
     }
 }
 

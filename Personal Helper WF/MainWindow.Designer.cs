@@ -44,6 +44,9 @@
             this.totalWorkTime = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.upperText = new System.Windows.Forms.Label();
+            this.calcInput = new System.Windows.Forms.TextBox();
+            this.calcLabel = new System.Windows.Forms.Label();
+            this.resultLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // WorkingButton
@@ -146,7 +149,7 @@
             this.timerTextLabel.BackColor = System.Drawing.Color.SkyBlue;
             this.timerTextLabel.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerTextLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.timerTextLabel.Location = new System.Drawing.Point(12, 239);
+            this.timerTextLabel.Location = new System.Drawing.Point(23, 249);
             this.timerTextLabel.Name = "timerTextLabel";
             this.timerTextLabel.Size = new System.Drawing.Size(252, 21);
             this.timerTextLabel.TabIndex = 10;
@@ -156,7 +159,7 @@
             // 
             this.totalWorkTime.AutoSize = true;
             this.totalWorkTime.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalWorkTime.Location = new System.Drawing.Point(12, 263);
+            this.totalWorkTime.Location = new System.Drawing.Point(23, 270);
             this.totalWorkTime.Name = "totalWorkTime";
             this.totalWorkTime.Size = new System.Drawing.Size(263, 21);
             this.totalWorkTime.TabIndex = 11;
@@ -166,11 +169,11 @@
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("NSimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(16, 54);
+            this.richTextBox1.Location = new System.Drawing.Point(16, 33);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(309, 168);
+            this.richTextBox1.Size = new System.Drawing.Size(300, 203);
             this.richTextBox1.TabIndex = 12;
-            this.richTextBox1.Text = "Done 1";
+            this.richTextBox1.Text = "";
             // 
             // upperText
             // 
@@ -178,11 +181,44 @@
             this.upperText.BackColor = System.Drawing.Color.SkyBlue;
             this.upperText.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upperText.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.upperText.Location = new System.Drawing.Point(23, 30);
+            this.upperText.Location = new System.Drawing.Point(12, 9);
             this.upperText.Name = "upperText";
             this.upperText.Size = new System.Drawing.Size(109, 21);
             this.upperText.TabIndex = 13;
             this.upperText.Text = "DONE LIST";
+            // 
+            // calcInput
+            // 
+            this.calcInput.Location = new System.Drawing.Point(377, 57);
+            this.calcInput.Name = "calcInput";
+            this.calcInput.Size = new System.Drawing.Size(175, 20);
+            this.calcInput.TabIndex = 14;
+            this.calcInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.calcInput.TextChanged += new System.EventHandler(this.calcInput_TextChanged);
+            // 
+            // calcLabel
+            // 
+            this.calcLabel.AutoSize = true;
+            this.calcLabel.BackColor = System.Drawing.Color.SkyBlue;
+            this.calcLabel.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calcLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.calcLabel.Location = new System.Drawing.Point(375, 33);
+            this.calcLabel.Name = "calcLabel";
+            this.calcLabel.Size = new System.Drawing.Size(120, 21);
+            this.calcLabel.TabIndex = 16;
+            this.calcLabel.Text = "CALCULATOR";
+            // 
+            // resultLabel
+            // 
+            this.resultLabel.AutoSize = true;
+            this.resultLabel.BackColor = System.Drawing.Color.SkyBlue;
+            this.resultLabel.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.resultLabel.Location = new System.Drawing.Point(375, 80);
+            this.resultLabel.Name = "resultLabel";
+            this.resultLabel.Size = new System.Drawing.Size(98, 21);
+            this.resultLabel.TabIndex = 17;
+            this.resultLabel.Text = "RESULT: ";
             // 
             // MainWindow
             // 
@@ -190,6 +226,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(566, 320);
+            this.Controls.Add(this.resultLabel);
+            this.Controls.Add(this.calcLabel);
+            this.Controls.Add(this.calcInput);
             this.Controls.Add(this.upperText);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.totalWorkTime);
@@ -228,6 +267,9 @@
         private System.Windows.Forms.Label totalWorkTime;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label upperText;
+        private System.Windows.Forms.TextBox calcInput;
+        private System.Windows.Forms.Label calcLabel;
+        private System.Windows.Forms.Label resultLabel;
     }
 }
 

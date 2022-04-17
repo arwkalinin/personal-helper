@@ -215,13 +215,29 @@ namespace Personal_Helper_WF
                 }
             }
         }
-
         private void SkipStageButton_Click(object sender, EventArgs e)
         {
             GoToNextTimerStage();
         }
 
-        
+        // *** CALCULATOR *** \\
+
+        private void calcInput_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string math = calcInput.Text;
+                string value = new DataTable().Compute(math, null).ToString();
+                resultLabel.Text = "RESULT: \n" + value;
+            }
+            catch
+            {
+
+            }
+        }
+
+        // ****************** \\
 
 
     }

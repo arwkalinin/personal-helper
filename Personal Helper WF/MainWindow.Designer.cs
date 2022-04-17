@@ -51,11 +51,12 @@
             // 
             // WorkingButton
             // 
+            this.WorkingButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.WorkingButton.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WorkingButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.WorkingButton.Location = new System.Drawing.Point(377, 228);
+            this.WorkingButton.Location = new System.Drawing.Point(292, 157);
             this.WorkingButton.Name = "WorkingButton";
-            this.WorkingButton.Size = new System.Drawing.Size(177, 32);
+            this.WorkingButton.Size = new System.Drawing.Size(164, 46);
             this.WorkingButton.TabIndex = 0;
             this.WorkingButton.Text = "START";
             this.WorkingButton.UseVisualStyleBackColor = true;
@@ -63,11 +64,12 @@
             // 
             // SkipStageButton
             // 
+            this.SkipStageButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SkipStageButton.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SkipStageButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SkipStageButton.Location = new System.Drawing.Point(377, 258);
+            this.SkipStageButton.Location = new System.Drawing.Point(292, 209);
             this.SkipStageButton.Name = "SkipStageButton";
-            this.SkipStageButton.Size = new System.Drawing.Size(177, 33);
+            this.SkipStageButton.Size = new System.Drawing.Size(164, 33);
             this.SkipStageButton.TabIndex = 1;
             this.SkipStageButton.Text = "SKIP STAGE";
             this.SkipStageButton.UseVisualStyleBackColor = true;
@@ -76,54 +78,54 @@
             // setWorkLabel
             // 
             this.setWorkLabel.AutoSize = true;
-            this.setWorkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setWorkLabel.Location = new System.Drawing.Point(373, 179);
+            this.setWorkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setWorkLabel.Location = new System.Drawing.Point(394, 79);
             this.setWorkLabel.Name = "setWorkLabel";
-            this.setWorkLabel.Size = new System.Drawing.Size(42, 20);
+            this.setWorkLabel.Size = new System.Drawing.Size(62, 20);
             this.setWorkLabel.TabIndex = 2;
-            this.setWorkLabel.Text = "work";
+            this.setWorkLabel.Text = "WORK";
             // 
             // setBreakLabel
             // 
             this.setBreakLabel.AutoSize = true;
-            this.setBreakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setBreakLabel.Location = new System.Drawing.Point(434, 179);
+            this.setBreakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setBreakLabel.Location = new System.Drawing.Point(387, 105);
             this.setBreakLabel.Name = "setBreakLabel";
-            this.setBreakLabel.Size = new System.Drawing.Size(49, 20);
+            this.setBreakLabel.Size = new System.Drawing.Size(69, 20);
             this.setBreakLabel.TabIndex = 3;
-            this.setBreakLabel.Text = "break";
+            this.setBreakLabel.Text = "BREAK";
             // 
             // setLongBreakLabel
             // 
             this.setLongBreakLabel.AutoSize = true;
-            this.setLongBreakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setLongBreakLabel.Location = new System.Drawing.Point(495, 179);
+            this.setLongBreakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setLongBreakLabel.Location = new System.Drawing.Point(371, 131);
             this.setLongBreakLabel.Name = "setLongBreakLabel";
-            this.setLongBreakLabel.Size = new System.Drawing.Size(57, 20);
+            this.setLongBreakLabel.Size = new System.Drawing.Size(85, 20);
             this.setLongBreakLabel.TabIndex = 4;
-            this.setLongBreakLabel.Text = "l-break";
+            this.setLongBreakLabel.Text = "L-BREAK";
             // 
             // pomodoroProgressBar
             // 
             this.pomodoroProgressBar.Location = new System.Drawing.Point(0, 297);
             this.pomodoroProgressBar.Name = "pomodoroProgressBar";
-            this.pomodoroProgressBar.Size = new System.Drawing.Size(566, 23);
+            this.pomodoroProgressBar.Size = new System.Drawing.Size(469, 23);
             this.pomodoroProgressBar.TabIndex = 6;
             // 
             // setLongBreakInput
             // 
-            this.setLongBreakInput.Location = new System.Drawing.Point(499, 202);
+            this.setLongBreakInput.Location = new System.Drawing.Point(292, 131);
             this.setLongBreakInput.Name = "setLongBreakInput";
-            this.setLongBreakInput.Size = new System.Drawing.Size(53, 20);
+            this.setLongBreakInput.Size = new System.Drawing.Size(71, 20);
             this.setLongBreakInput.TabIndex = 7;
             this.setLongBreakInput.Text = "20";
             this.setLongBreakInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // setBreakInput
             // 
-            this.setBreakInput.Location = new System.Drawing.Point(438, 202);
+            this.setBreakInput.Location = new System.Drawing.Point(292, 105);
             this.setBreakInput.Name = "setBreakInput";
-            this.setBreakInput.Size = new System.Drawing.Size(55, 20);
+            this.setBreakInput.Size = new System.Drawing.Size(71, 20);
             this.setBreakInput.TabIndex = 8;
             this.setBreakInput.Text = "5";
             this.setBreakInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -131,9 +133,9 @@
             // setWorkInput
             // 
             this.setWorkInput.BackColor = System.Drawing.SystemColors.Window;
-            this.setWorkInput.Location = new System.Drawing.Point(377, 202);
+            this.setWorkInput.Location = new System.Drawing.Point(292, 79);
             this.setWorkInput.Name = "setWorkInput";
-            this.setWorkInput.Size = new System.Drawing.Size(55, 20);
+            this.setWorkInput.Size = new System.Drawing.Size(71, 20);
             this.setWorkInput.TabIndex = 9;
             this.setWorkInput.Text = "25";
             this.setWorkInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -146,8 +148,8 @@
             // timerTextLabel
             // 
             this.timerTextLabel.AutoSize = true;
-            this.timerTextLabel.BackColor = System.Drawing.Color.SkyBlue;
-            this.timerTextLabel.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timerTextLabel.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.timerTextLabel.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerTextLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.timerTextLabel.Location = new System.Drawing.Point(23, 249);
             this.timerTextLabel.Name = "timerTextLabel";
@@ -171,27 +173,29 @@
             this.richTextBox1.Font = new System.Drawing.Font("NSimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(16, 33);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(300, 203);
+            this.richTextBox1.Size = new System.Drawing.Size(270, 209);
             this.richTextBox1.TabIndex = 12;
             this.richTextBox1.Text = "";
             // 
             // upperText
             // 
             this.upperText.AutoSize = true;
-            this.upperText.BackColor = System.Drawing.Color.SkyBlue;
-            this.upperText.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upperText.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.upperText.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upperText.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.upperText.Location = new System.Drawing.Point(12, 9);
+            this.upperText.Location = new System.Drawing.Point(23, 9);
             this.upperText.Name = "upperText";
-            this.upperText.Size = new System.Drawing.Size(109, 21);
+            this.upperText.Size = new System.Drawing.Size(118, 21);
             this.upperText.TabIndex = 13;
             this.upperText.Text = "DONE LIST";
             // 
             // calcInput
             // 
-            this.calcInput.Location = new System.Drawing.Point(377, 57);
+            this.calcInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.calcInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calcInput.Location = new System.Drawing.Point(292, 33);
             this.calcInput.Name = "calcInput";
-            this.calcInput.Size = new System.Drawing.Size(175, 20);
+            this.calcInput.Size = new System.Drawing.Size(164, 19);
             this.calcInput.TabIndex = 14;
             this.calcInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.calcInput.TextChanged += new System.EventHandler(this.calcInput_TextChanged);
@@ -199,33 +203,33 @@
             // calcLabel
             // 
             this.calcLabel.AutoSize = true;
-            this.calcLabel.BackColor = System.Drawing.Color.SkyBlue;
-            this.calcLabel.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calcLabel.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.calcLabel.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calcLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.calcLabel.Location = new System.Drawing.Point(375, 33);
+            this.calcLabel.Location = new System.Drawing.Point(312, 9);
             this.calcLabel.Name = "calcLabel";
-            this.calcLabel.Size = new System.Drawing.Size(120, 21);
+            this.calcLabel.Size = new System.Drawing.Size(130, 21);
             this.calcLabel.TabIndex = 16;
             this.calcLabel.Text = "CALCULATOR";
             // 
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.BackColor = System.Drawing.Color.SkyBlue;
+            this.resultLabel.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.resultLabel.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.resultLabel.Location = new System.Drawing.Point(375, 80);
+            this.resultLabel.Location = new System.Drawing.Point(292, 55);
             this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(98, 21);
+            this.resultLabel.Size = new System.Drawing.Size(32, 21);
             this.resultLabel.TabIndex = 17;
-            this.resultLabel.Text = "RESULT: ";
+            this.resultLabel.Text = "= ";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(566, 320);
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.ClientSize = new System.Drawing.Size(469, 320);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.calcLabel);
             this.Controls.Add(this.calcInput);

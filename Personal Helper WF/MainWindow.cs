@@ -65,7 +65,7 @@ namespace Personal_Helper_WF
             pomodoroProgressBar.Value = 0;
             pomodoroStatus = "POMODORO SLEEP";
             workingSessions = 0;
-            timerTextLabel.BackColor = Color.SkyBlue;
+            timerTextLabel.BackColor = Color.DarkSeaGreen;
             timerTextLabel.Text = $"00:00 | POMODORO STOPPED";
             isPomodoroRunning = false;
             SwitchPomodoroButton();
@@ -229,7 +229,7 @@ namespace Personal_Helper_WF
 
                 string math = calcInput.Text;
                 string value = new DataTable().Compute(math, null).ToString();
-                resultLabel.Text = "RESULT: \n" + value;
+                resultLabel.Text = "= " + value;
             }
             catch
             {

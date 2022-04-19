@@ -127,7 +127,12 @@ namespace Personal_Helper_WF
             if (Math.Floor(seconds / 60) < 10)
                 label.Text = label.Text.Insert(0, "0");
             if (seconds % 60 < 10)
-                label.Text = label.Text.Insert(3, "0");
+            {
+                if (seconds / 60 > 2)
+                    label.Text = label.Text.Insert(4, "0");
+                else
+                    label.Text = label.Text.Insert(3, "0");
+            }
         }
 
         private void ProgressValueProcess(double timeLeft)
